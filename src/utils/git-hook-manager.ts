@@ -120,8 +120,8 @@ exit 0
     const batScript = `@echo off
     git diff --cached --name-only --diff-filter=ACMRUX > nul 2>&1
     if %errorlevel% neq 0 exit /b 0
-    echo Running cxgrd team precommit...
-    cxgrd team precommit
+    echo Running cxgrd check...
+    cxgrd check
     if %errorlevel% neq 0 (
     echo Architecture check failed. Commit blocked.
     exit /b 1
